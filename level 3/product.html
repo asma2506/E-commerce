@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - My E-commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <h1>Products</h1>
+        <a href="cart.html" id="cart">Cart (0)</a>
+        <a href="product.html?category=Western wear" class="button">Shop Now</a>
+    </div>
+    </nav>
+    <style>
+        body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+height: 100vh; /* Ensures full viewport height */
+background-image: url('bg.jpg');
+background-size: cover; /* Ensures the image covers the entire background */
+background-position: center; /* Centers the background image */
+background-repeat: repeat; /* Prevents the image from repeating */
+}
+.product-details {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates responsive columns */
+    gap: 20px;
+}
+
+.product {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+#products {
+    display: flex;           /* Use flexbox to arrange items in a row */
+    flex-wrap: wrap;         /* Allow items to wrap to the next line if they overflow */
+    gap: 20px;               /* Space between items */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+.product {
+    flex: 1 1 200px;         /* Each product takes equal width, with a base of 200px */
+    max-width: 250px;        /* Maximum width for each product */
+    padding: 10px;
+    border: 1px solid #ddd; /* Add a border for visual separation */
+    background-color: #fff; /* Background color for each product */
+    text-align: center;      /* Center the text */
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
+<nav>
+<section id="Western">
+    <section id="products">
+        <!-- Western Collection -->
+        <div class="product">
+            <h2>Trendy kurti</h2>
+            <img src="as.webp" width="200" height="300">
+            <p><strong>Price: $250</strong></p>
+            <p><strong>Fabric:cotton</strong></p>
+            <p><strong>Size:XL</strong></p>
+            <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            <a href="product.html?category=kurti" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>classic kurti</h2>
+            <img src="as1.jpg" width="200" height="300">
+            <p><strong>Price: $450</strong></p>
+            <p><strong>Fabric:Rayan</strong></p>
+            <p><strong>Size:XXL</strong></p>
+            <button onclick="addToCart('classic kurti', 450)">Add to Cart</button>
+            <a href="product.html?category=kurti" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>classic kurti</h2>
+            <img src="as2.jpeg" width="200" height="300">
+            <p><strong>Price: $650</strong></p>
+            <p><strong>Fabric:cotton</strong></p>
+            <p><strong>Size:L</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=kurti" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>trendy kurti</h2>
+            <img src="as3.jpg" width="200" height="300">
+            <p><strong>Price: $350</strong></p>
+            <p><strong>Fabric:cotton</strong></p>
+            <p><strong>Size:M</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=kurti" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>Fashion kurti</h2>
+            <img src="as4.webp" width="200" height="300">
+            <p><strong>Price: $250</strong></p>
+            <p><strong>Fabric:Crepe</strong></p>
+            <p><strong>Size:XS</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=kurti" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>crop top</h2>
+            <img src="t.jpg" width="200" height="300">
+            <p><strong>Price: $350</strong></p>
+            <p><strong>Fabric:cotton</strong></p>
+            <p><strong>Size:XL</strong></p>
+            <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            <a href="product.html?category=crop top" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>gown</h2>
+            <img src="t1.avif" width="200" height="300">
+            <p><strong>Price: $350</strong></p>
+            <p><strong>Fabric:cotton</strong></p>
+            <p><strong>Size:XXL</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=gown" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2> kurti</h2>
+            <img src="t4.jpg" width="200" height="300">
+            <p><strong>Price: $550</strong></p>
+            <p><strong>Fabric:crepe</strong></p>
+            <p><strong>Size:L</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=kurti" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>Jean</h2>
+            <img src="t2.jpg" width="200" height="300">
+            <p><strong>Price: $950</strong></p>
+            <p><strong>Fabric:jean</strong></p>
+            <p><strong>Size:M</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=jean" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>Fashion gown</h2>
+            <img src="t3.jpg" width="200" height="300">
+            <p><strong>Price: $250</strong></p>
+            <p><strong>Fabric:organza</strong></p>
+            <p><strong>Size:XS</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=gown" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>phn case 1</h2>
+            <img src="p.jpg" width="200" height="300">
+            <p><strong>Price: $150</strong></p>
+            <p><strong>material:silicon</strong></p>
+            <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+            <a href="product.html?category=phn case 1" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>phn case 2</h2>
+            <img src="p1.jpg" width="200" height="300">
+            <p><strong>Price: $350</strong></p>
+            <p><strong>material:silicon</strong></p>
+
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=phn case 2" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2> phn case 3</h2>
+            <img src="p2.jpg" width="200" height="300">
+            <p><strong>Price: $150</strong></p>
+            <p><strong>material:silicon</strong></p>
+            
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=kurti" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>phn case 4</h2>
+            <img src="p3.jpg" width="200" height="300">
+            <p><strong>Price: $250</strong></p>
+            <p><strong>material plastic</strong></p>
+            
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=jean" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2> headphn</h2>
+            <img src="p5.jpg" width="200" height="300">
+            <p><strong>Price: $450</strong></p>
+            <p><strong>Quality:1</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=gown" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2>LED TV</h2>
+            <img src="p6.jpg.crdownload" width="200" height="300">
+            <p><strong>Price: $550</strong></p>
+            <p><strong>material plastic</strong></p>
+            
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=jean" class="button">Shop Now</a>
+        </div>
+        <div class="product">
+            <h2> juicer</h2>
+            <img src="p7.jpg" width="200" height="300">
+            <p><strong>Price: $150</strong></p>
+            <p><strong>Quality:1</strong></p>
+            <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+            <a href="product.html?category=gown" class="button">Shop Now</a>
+        </div>
+</section>
+    </section>
+</nav>
+    <script>
+        // Get the category from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+
+        // Get all product items
+        const productItems = document.querySelectorAll('.product-item');
+
+        // Loop through each product item and display only the ones that match the category
+        productItems.forEach(item => {
+            if (item.getAttribute('data-category') !== category) {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'block';
+            }
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

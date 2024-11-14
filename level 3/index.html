@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My E-commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <center><h1>My E-commerce Site</h1>
+            <a href="cart.html" id="cart">Cart (0)</a>
+        </center>
+        <style>
+            body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensures full viewport height */
+    background-image: url('bg.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: repeat; /* Prevents the image from repeating */
+}
+/* Center Welcome Section */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    color: white; /* White text for contrast against the background */
+    padding: 20px;
+}
+
+.welcome h2, .welcome p {
+    margin: 10px 0;
+}
+.category-container {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    gap: 20px; /* Space between each card */
+    justify-content: center; /* Center the cards horizontally */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens if needed */
+    padding-bottom: 10px; /* Extra padding for scroll space */
+}
+.category img {
+    width: 100%; /* Ensures the image fills the card width */
+    height: 120px; /* Reduces the height of the image */
+    object-fit: cover; /* Keeps the image proportionate and fills the space */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+        </style>
+
+        
+    </nav>
+
+    <!-- Centered Welcome Section -->
+    <center><section class="welcome">
+        <h1>Welcome to Our Store!</h1>
+        <p>Browse our amazing products.</p>
+        <a href="product.html" class="button">View Products</a>
+    </section></center>
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-container">
+            <!-- Example Category Cards -->
+            <div class="category-card">
+                <img src="w.jpg" width="200" height="350" alt="Category 1">
+                <h3>Western</h3>
+                <a href="product.html?category=Western wear" class="button">Shop Now</a>
+            </div>
+            <div class="category-card">
+                <img src="k.avif" width="200" height="350" alt="Category 2">
+                <h3>Kids Fashion</h3>
+                <a href="product.html?category=Kids wear" class="button">Shop Now</a>
+            </div>
+            <div class="category-card">
+                <img src="h.webp" width="200" height="350" alt="Category 3">
+                <h3>Home Appliances</h3>
+                <a href="product.html?category=home-appliances" class="button">Shop Now</a>
+            </div>
+            <div class="category-card">
+                <img src="e.jpg" width="200" height="350" alt="Category 3">
+                <h3>Electronic</h3>
+                <a href="product.html?category=Electronics" class="button">Shop Now</a>
+            </div>
+            <div class="category-card">
+                <img src="a.webp" width="200" height="350" alt="Category 3">
+                <h3>Hair Accessories</h3>
+                <a href="product.html?category=Hair Accessories" class="button">Shop Now</a>
+            </div>
+            
+            <!-- Add more categories as needed -->
+        </div>
+    </section>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>

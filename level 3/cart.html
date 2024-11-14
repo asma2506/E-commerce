@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - My E-commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <style>
+        body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+height: 100vh; /* Ensures full viewport height */
+background-image: url('bg.jpg');
+background-size: cover; /* Ensures the image covers the entire background */
+background-position: center; /* Centers the background image */
+background-repeat: repeat; /* Prevents the image from repeating */
+}
+.cart-modal-content button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+</style>
+    <nav>
+        <a href="product.html">Continue Shopping</a>
+        <h1>Your Cart</h1>
+    </nav>
+
+    <section id="cartItems">
+        <!-- Cart items will be displayed here by JavaScript -->
+    </section>
+
+    <div class="cart-summary">
+        <h3>Total: $<span id="totalAmount">1</span></h3>
+        <a href="payment.html" class="button">Proceed to Payment</a>
+    </div>
+
+    <button onclick="clearCart()">Clear Cart</button>
+
+    <script>
+        // Load and display cart items from local storage
+        function loadCart() {
+            const cartContainer = document.getElementById('cartItems');  // Corrected ID here
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+                document.getElementById("totalAmount").textContent = "0";
+                return;
+            }
+
+            cartContainer.innerHTML = ""; // Clear existing content
+            let total = 0;
+
+            // Display each item in the cart
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `<p>${item.name} - $${item.price}</p>`;
+                cartContainer.appendChild(itemElement);
+                total += item.price;
+            });
+
+            // Update total amount
+            document.getElementById("totalAmount").textContent = total;
+        }
+
+        // Function to clear the cart
+        function clearCart() {
+            localStorage.removeItem('cart');
+            loadCart(); // Reload cart to update display
+        }
+
+        // Load the cart when the page is loaded
+        window.onload = loadCart;
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
